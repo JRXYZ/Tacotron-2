@@ -10,7 +10,7 @@ hparams = tf.contrib.training.HParams(
 
 	#Audio
 	num_mels = 80, #Number of mel-spectrogram channels and local conditioning dimensionality
-	num_freq = 2049, # (= n_fft / 2 + 1) only used when adding linear spectrograms post processing network
+	num_freq = 1025, # (= n_fft / 2 + 1) only used when adding linear spectrograms post processing network
 	rescale = True, #Whether to rescale audio prior to preprocessing
 	rescaling_max = 0.999, #Rescaling value
 	trim_silence = True, #Whether to clip silence in Audio (at beginning and end of audio only, not the middle)
@@ -20,14 +20,14 @@ hparams = tf.contrib.training.HParams(
 	# Use LWS (https://github.com/Jonathan-LeRoux/lws) for STFT and phase reconstruction
 	# It's preferred to set True to use with https://github.com/r9y9/wavenet_vocoder
 	# Does not work if n_ffit is not multiple of hop_size!!
-	use_lws=False,
+	use_lws=True,
 	silence_threshold=2, #silence threshold used for sound trimming for wavenet preprocessing
 
 	#Mel spectrogram
-	n_fft = 4096, #Extra window size is filled with 0 paddings to match this parameter
-	hop_size = 300, #For 22050Hz, 275 ~= 12.5 ms
-	win_size = 2400, #For 22050Hz, 1100 ~= 50 ms (If None, win_size = n_fft)
-	sample_rate = 48000, #22050 Hz (corresponding to ljspeech dataset)
+	n_fft = 1024, #Extra window size is filled with 0 paddings to match this parameter
+	hop_size = 256, #For 22050Hz, 275 ~= 12.5 ms
+	win_size = None, #For 22050Hz, 1100 ~= 50 ms (If None, win_size = n_fft)
+	sample_rate = 22050, #22050 Hz (corresponding to ljspeech dataset)
 	frame_shift_ms = None,
 
 	#M-AILABS (and other datasets) trim params
@@ -45,16 +45,16 @@ hparams = tf.contrib.training.HParams(
 	#Limits
 	min_level_db = -100,
 	ref_level_db = 20,
-	fmin = 0, #Set this to 75 if your speaker is male! if female, 125 should help taking off noise. (To test depending on dataset)
+	fmin = 125, #Set this to 75 if your speaker is male! if female, 125 should help taking off noise. (To test depending on dataset)
 	fmax = 7600,
 
 	#Griffin Lim
-	power = 1.5,
+	power = 1.,
 	griffin_lim_iters = 60,
 	###########################################################################################################################################
 
 	#Tacotron
-	outputs_per_step = 2, #number of frames to generate at each decoding step (speeds up computation and allows for higher batch size)
+	outputs_per_step = 1, #number of frames to generate at each decoding step (speeds up computation and allows for higher batch size)
 	stop_at_any = True, #Determines whether the decoder should stop when predicting <stop> to any frame or to all of them
 
 	embedding_dim = 512, #dimension of embedding space
@@ -103,8 +103,8 @@ hparams = tf.contrib.training.HParams(
 
 	#To use Gaussian distribution as output distribution instead of mixture of logistics, set "out_channels = 2" instead of "out_channels = 10 * 3". (UNDER TEST)
 	out_channels = 2, #This should be equal to quantize channels when input type is 'mulaw-quantize' else: num_distributions * 3 (prob, mean, log_scale).
-	layers = 30, #Number of dilated convolutions (Default: Simplified Wavenet of Tacotron-2 paper)
-	stacks = 3, #Number of dilated convolution stacks (Default: Simplified Wavenet of Tacotron-2 paper)
+	layers = 24, #Number of dilated convolutions (Default: Simplified Wavenet of Tacotron-2 paper)
+	stacks = 4, #Number of dilated convolution stacks (Default: Simplified Wavenet of Tacotron-2 paper)
 	residual_channels = 512,
 	gate_channels = 512, #split in 2 in gated convolutions
 	skip_out_channels = 256,
