@@ -141,7 +141,7 @@ def train(log_dir, args, hparams):
 
 	#Memory allocation on the GPU as needed
 	config = tf.ConfigProto()
-	config.gpu_options.allow_growth = False
+	config.gpu_options.allow_growth = True
 
 	#Train
 	with tf.Session(config=config) as sess:
