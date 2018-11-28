@@ -42,7 +42,7 @@ def norm_data(args):
 			args.dataset, supported_datasets))
 
 	if args.dataset.startswith('LJSpeech'):
-		return [os.path.join(args.base_dir, "LJ_AUDREY")]
+		return [os.path.join(args.base_dir, "Data")]
 
 
 	if args.dataset == 'M-AILABS':
