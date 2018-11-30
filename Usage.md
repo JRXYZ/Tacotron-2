@@ -4,6 +4,7 @@
 A tacotron model is trained. Experments with generation of speech using this models is found on [<i>Tacotron Demo.ipynb</i>](https://github.com/hansonrobotics/Tacotron-2/blob/master/Tacotron%20Demo.ipynb) notebook.
 <h3> Requirements</h3>
 * logs-Tacotron directory - Contains trained  models
+The models can be downloaded from [this google drive folder]().
 ---
 * <h2>Graffin-lim algorithm</h2>
 
