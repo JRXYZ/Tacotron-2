@@ -1,11 +1,8 @@
 # Tacotron-2:
 Tensorflow implementation of DeepMind's Tacotron-2. A deep neural network architecture described in this paper: [Natural TTS synthesis by conditioning Wavenet on MEL spectogram predictions](https://arxiv.org/pdf/1712.05884.pdf)
 
-<<<<<<< HEAD
-# Exprements
+### Exprements
 For notebooks on diffrent tts architectures please visit [here](https://github.com/hansonrobotics/Tacotron-2/blob/master/Usage.md). 
-=======
->>>>>>> 4bde4ef2f3cde8558e94c71ca51415ad8a08b1e5
 
 # Repository Structure:
 	Tacotron-2
