@@ -6,6 +6,7 @@ A tacotron model is trained. Experments with generation of speech using this mod
 <h3> Requirements</h3>
 * logs-Tacotron directory - Contains trained  models
 The models can be downloaded from [this google drive folder](https://drive.google.com/file/d/1Y9a9LZ9L3-1h0hCpd11dUN-JsZtgxZ6U/view?usp=sharing).
+
 ---
 
  <h2>Graffin-lim algorithm</h2>
@@ -22,7 +23,7 @@ The process to run the generation is listed on the notebook.
 Two notebooks are availale for two diffrent commits.
 
 * [Nov 10](https://github.com/NVIDIA/waveglow/commit/f4c04e2d968de01b22d2fb092bbbf0cec0b6586f)
-    [Notebook] (https://github.com/hansonrobotics/Tacotron-2/blob/master/waveglow-v1/waveglow.ipynb)
+    [Notebook](https://github.com/hansonrobotics/Tacotron-2/blob/master/waveglow-v1/waveglow.ipynb)
 * [Nov 22](https://github.com/NVIDIA/waveglow/commit/71775e4a142f54bd5b9d3f605bcb8e38f1f3d5ca)
     [Notebook](https://github.com/hansonrobotics/Tacotron-2/blob/master/waveglow-v1/waveglow.ipynb)
 --- 
