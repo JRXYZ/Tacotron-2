@@ -6,10 +6,6 @@ A tacotron model is trained. Experments with generation of speech using this mod
 <h3> Requirements</h3>
 * logs-Tacotron directory - Contains trained  models
 The models can be downloaded from [this google drive folder](https://drive.google.com/file/d/1Y9a9LZ9L3-1h0hCpd11dUN-JsZtgxZ6U/view?usp=sharing).
-<<<<<<< HEAD
-
-=======
->>>>>>> 9eea6a09f689401f729bb2beb8b1ebf2472cf51e
 ---
 
  <h2>Graffin-lim algorithm</h2>
