@@ -104,10 +104,6 @@ venv.bak/
 .mypy_cache/
 
 # Tacotron 2 oddities
-<<<<<<< HEAD
-
-=======
 logs-*/
->>>>>>> 4bde4ef2f3cde8558e94c71ca51415ad8a08b1e5
 training_data/
 
