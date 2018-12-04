@@ -31,7 +31,7 @@ The process to run the generation is listed on the notebook.
 Two notebooks are available for two different commits.
 
 * [Nov 10 Commit ](https://github.com/NVIDIA/waveglow/commit/f4c04e2d968de01b22d2fb092bbbf0cec0b6586f)
-    [Notebook](https://github.com/hansonrobotics/Tacotron-2/blob/master/waveglow-v1/waveglow.ipynb)
+    [Colab notebook](https://colab.research.google.com/drive/1rEGqQNpSofGagSKkq08ZMGVZzMPbqu8C)
 * [Nov 22 Commit](https://github.com/NVIDIA/waveglow/commit/71775e4a142f54bd5b9d3f605bcb8e38f1f3d5ca)
     [Notebook](https://github.com/hansonrobotics/Tacotron-2/blob/master/waveglow-v2/WaveGlow.ipynb)
 --- 
